@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "CustomMissText",
+  "name": "CustomMissText",
+  "author": "Exomanz, inspired by Arti",
+  "version": "1.0.5",
+  "description": "Brings back Arti's original CustomMissText mod with more customization and features.",
+  "gameVersion": "1.16.1",
+  "dependsOn": {
+    "BSIPA": "^4.1.6",
+    "SiraUtil": "^2.5.5",
+    "BeatSaberMarkupLanguage": "^1.5.3"
+  }
+}
