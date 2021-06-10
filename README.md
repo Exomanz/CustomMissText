@@ -1,5 +1,5 @@
 # CustomMissText
-Fork of Arti's original CustomMissText mod for Beat Saber, now updated for the latest version.\\
+Fork of Arti's original CustomMissText mod for Beat Saber, now updated for the latest version.
 
 ## Overview:
 CustomMissText is a mod that replaces the default "MISS" *image* with a text object that chooses a random string for each missed note. Originally developed by [Arti](https://gitlab.com/artemiswkearney), this mod worked all the way up until the missed note object became an image instead of text, and I'm looking to revive this mod and introduce some of my own twists and features, much like my take on [CustomFailText](https://github.com/Exomanz/CustomFailText) (also initially developed by [Arti](https://gitlab.com/artemiswkearney)).
