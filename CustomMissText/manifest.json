@@ -3,7 +3,7 @@
   "id": "CustomMissText",
   "name": "CustomMissText",
   "author": "Exomanz, inspired by Arti",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Brings back Arti's original CustomMissText mod with more customization and features.",
   "gameVersion": "1.16.1",
   "dependsOn": {

@@ -32,7 +32,7 @@ namespace CustomMissText.HarmonyPatches
                         }
                     }
                     _spawner.SetField("_fontSize", 3f);
-                    _spawner.SetField("_color", Color.red);
+                    _spawner.SetField("_color", Plugin.config.DefaultTextColor);
 
                     return _spawner;
                 }
@@ -74,11 +74,13 @@ namespace CustomMissText.HarmonyPatches
             {
                 System.Random r = new System.Random();
                 int entryPicked = r.Next(Plugin.allEntries.Count);
+                TextMeshPro tmp = ____text;
 
                 text = string.Join("\n", Plugin.allEntries[entryPicked]);
-                ____text.overflowMode = TextOverflowModes.Overflow;
-                ____text.enableWordWrapping = false;
-                ____text.richText = true;
+                if (Plugin.config.Italics) tmp.fontStyle = FontStyles.Italic;
+                tmp.overflowMode = TextOverflowModes.Overflow;
+                tmp.enableWordWrapping = false;
+                tmp.richText = true;
             }
             return true;
         }
