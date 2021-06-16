@@ -13,7 +13,7 @@ using Zenject;
 namespace CustomMissText.UI.Settings
 {
     [ViewDefinition("CustomMissText.UI.Settings.Views.mainSettingsView.bsml")]
-    [HotReload(RelativePathToLayout = @"..\Settings\Views\mainSettingsView.bsml")]
+    //[HotReload(RelativePathToLayout = @"..\Settings\Views\mainSettingsView.bsml")]
     internal class MissTextMainSettingsController : BSMLAutomaticViewController
     {
         ListBuilder _builder;
