@@ -15,11 +15,6 @@ CustomMissText is a mod that replaces the default "MISS" *image* with a text obj
 * SiraUtil: v2.5.5+
 * BeatSaberMarkupLanguage: v1.5.3+
 
-## Roadpath:
-* Add configuration, including but not limited to (default) colors and italics.
-* Add UI
-* ???
-
 ## Known Issues:
 * If more than one note is missed on the same beat, the same entry will be picked for all notes.
 
