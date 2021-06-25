@@ -4,16 +4,16 @@ Fork of Arti's original CustomMissText mod for Beat Saber, now updated for the l
 ## Overview:
 CustomMissText is a mod that replaces the default "MISS" *image* with a text object that chooses a random string for each missed note. Originally developed by [Arti](https://gitlab.com/artemiswkearney), this mod worked all the way up until the missed note object became an image instead of text, and I'm looking to revive this mod and introduce some of my own twists and features, much like my take on [CustomFailText](https://github.com/Exomanz/CustomFailText) (also initially developed by [Arti](https://gitlab.com/artemiswkearney)).
 
-## Current Features:
-* Replaces the "MISS" image with a text object, that displays a random entry from the config file for each note missed.
-* Automatic directory and text file creation with support to be remade during runtime in the event it gets accidentally deleted.
-* Offers TextMeshPro styling, including colors, size, and much more. See the [TextMeshPro documentation](http://digitalnativestudios.com/textmeshpro/docs/rich-text/ "TextMeshPro Docs") for more information.
-* Supports multiple config files, but they have to be specified through the `CustomMissText.json` file in the UserData folder, and must declare the **EXACT** file name.
-
 ## Dependencies:
 * BSIPA: v4.1.6+
 * SiraUtil: v2.5.5+
 * BeatSaberMarkupLanguage: v1.5.3+
+
+## Current Features:
+* Replaces the "MISS" image with a text object, that displays a random entry from the config file for each note missed.
+* Offers TextMeshPro styling, including colors, size, and much more. See the [TextMeshPro documentation](http://digitalnativestudios.com/textmeshpro/docs/rich-text/ "TextMeshPro Docs") for more information.
+* Automatic directory and text file creation with support to be remade during runtime in the event it gets accidentally deleted.
+* Default colors, italics toggle, and multiple config files are all supported and can be configured in the settings menu.
 
 ## Known Issues:
 * If more than one note is missed on the same beat, the same entry will be picked for all notes.
