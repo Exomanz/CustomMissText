@@ -113,7 +113,7 @@ namespace CustomMissText
         }
 
         internal const string _defaultConfig =
-@"# CustomMissText v1.0.6
+@"# CustomMissText v1.0.7
 # by Exomanz and Arti
 # 
 # Use # for comments!
