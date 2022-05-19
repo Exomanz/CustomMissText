@@ -1,0 +1,11 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+	xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ 
+	https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+	<settings-container>
+		<checkbox text='Enabled' value='enabled' apply-on-change='True'/>
+		<checkbox text='Italics' value='use-italics' apply-on-change='True'/>
+		<checkbox text='Bloom Font' value='use-bloom-font' apply-on-change='True'/>
+		<color-setting text='Text Color' value='default-text-color' apply-on-change='True'/>
+		<dropdown-list-setting text='Config' value='current-config' choices='config-list' apply-on-change='True'/>
+	</settings-container>
+</bg>
