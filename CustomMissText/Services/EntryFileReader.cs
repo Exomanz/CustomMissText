@@ -75,6 +75,9 @@ namespace CustomMissText.Services
 
         private async Task<List<string[]>> ListBuilder(string configName)
         {
+            CheckDirectory();
+            string pathToReadFrom = Path.Combine(Helpers.DIRECTORY, configName + ".txt");
+
             // Returned variable
             List<string[]> fileEntries = new List<string[]>();
 
@@ -83,7 +86,6 @@ namespace CustomMissText.Services
 
             await Task.Factory.StartNew(delegate
             {
-                string pathToReadFrom = Path.Combine(Helpers.DIRECTORY, configName + ".txt");
                 IEnumerable<string> linesInFile = File.ReadLines(pathToReadFrom, new UTF8Encoding(true));
 
                 // Remove Comments
