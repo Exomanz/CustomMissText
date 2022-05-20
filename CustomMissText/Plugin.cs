@@ -6,7 +6,6 @@ using IPA;
 using IPA.Config.Stores;
 using IPAConfig = IPA.Config.Config;
 using IPALogger = IPA.Logging.Logger;
-using SiraUtil.Zenject;
 using System.Reflection;
 using UnityEngine;
 
@@ -22,7 +21,7 @@ namespace CustomMissText
         private EntryFileReader fileReader;
 
         [Init] 
-        public Plugin(IPALogger logger, IPAConfig config, Zenjector zenjector)
+        public Plugin(IPALogger logger, IPAConfig config)
         {
             harmony = new Harmony(Helpers.HARMONY_ID);
             Config = config.Generated<PluginConfig>();
