@@ -5,7 +5,7 @@
   "author": "Exomanz",
   "version": "1.1.2",
   "description": "Reboot of Arti's original CustomMissText mod with more customization and features.",
-  "gameVersion": "1.24.1",
+  "gameVersion": "1.24.0",
   "dependsOn": {
     "BSIPA": "^4.2.2",
     "BeatSaberMarkupLanguage": "^1.6.3"
