@@ -3,9 +3,9 @@
   "id": "CustomMissText",
   "name": "CustomMissText",
   "author": "Exomanz",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Reboot of Arti's original CustomMissText mod with more customization and features.",
-  "gameVersion": "1.22.1",
+  "gameVersion": "1.24.1",
   "dependsOn": {
     "BSIPA": "^4.2.2",
     "BeatSaberMarkupLanguage": "^1.6.3"

@@ -6,6 +6,10 @@ using UnityEngine;
 
 namespace CustomMissText.Services
 {
+    /// <summary>
+    /// Code lazily taken from HitScoreVisualizer by Eris
+    /// TO BE FAIR, PART OF THIS CODE WAS WRITTEN BY ME
+    /// </summary>
     internal class BloomFontConfigurationManager : IDisposable
     {
         private readonly PluginConfig Config = Plugin.Config;

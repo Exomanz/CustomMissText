@@ -43,9 +43,9 @@ namespace CustomMissText.Services
             }
         }
 
-        private void CheckDirectoryAndReadFileOnMenu(Scene _, Scene newScene)
+        private void CheckDirectoryAndReadFileOnMenu(Scene oldScene, Scene newScene)
         {
-            if (newScene.name == "MainMenu" && Config.Enabled)
+            if (newScene.name == "MainMenu" && oldScene.name != "GameCore" && Config.Enabled)
             {
                 Logger.Debug($"Reading entries from entry file '{Config.CurrentConfig}'");
                 CheckDirectory();
@@ -123,7 +123,7 @@ namespace CustomMissText.Services
                 return await ListBuilder(configName);
             }
 
-            Logger.Info($"Config '{configName}' contains {fileEntries.Count} entries.");
+            Logger.Debug($"Config '{configName}' contains {fileEntries.Count} entries.");
             return fileEntries;
         }
     }
