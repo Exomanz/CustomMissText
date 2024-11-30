@@ -28,19 +28,24 @@ namespace CustomMissText
             Logger = logger;
 
             fileReader = new GameObject("CustomMissText_FileReader").AddComponent<EntryFileReader>();
+            BeatSaberMarkupLanguage.Util.MainMenuAwaiter.MainMenuInitializing += MainMenuInit;
+        }
+
+        public void MainMenuInit()
+        {
+            BSMLSettings.Instance.AddSettingsMenu("CustomMissText", "CustomMissText.UI.settingsMenu.bsml", SettingsMenu.instance);
         }
 
         [OnEnable]
         public void OnEnable()
         {
-            BSMLSettings.instance.AddSettingsMenu("CustomMissText", "CustomMissText.UI.settingsMenu.bsml", SettingsMenu.instance);
-            PatchState(true);
+            PatchState(Config.Enabled);
         }
 
         [OnDisable]
         public void OnDisable()
         {
-            BSMLSettings.instance.RemoveSettingsMenu(SettingsMenu.instance);
+            BSMLSettings.Instance.RemoveSettingsMenu(SettingsMenu.instance);
             Object.Destroy(fileReader);
             PatchState(false);
         }

@@ -1,19 +1,14 @@
 ﻿using CustomMissText.Services;
 using HarmonyLib;
 using IPA.Utilities;
-using System;
-using System.Reflection;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using Zenject;
 
 namespace CustomMissText.Patches
 {
-    [HarmonyPatch(typeof(MissedNoteEffectSpawner))]
-    internal class MissedNoteEffectSpanwer_HandleNoteWasMissed
+    [HarmonyPatch(typeof(MissedNoteEffectSpawner), nameof(MissedNoteEffectSpawner.HandleNoteWasMissed))]
+    internal class MissedNoteEffectSpawner_HandleNoteWasMissed
     {
-        private static MethodInfo info = null;
-            
         public static bool inMethod = true;
         internal static DiContainer Container = null;
 
@@ -42,24 +37,6 @@ namespace CustomMissText.Patches
 
                     return _spawner;
                 }
-            }
-        }
-
-        [HarmonyTargetMethod]
-        internal static MethodBase TargetMethod()
-        {
-            if (info != null) return info;
-
-            try
-            {
-                info = typeof(MissedNoteEffectSpawner).GetMethod("HandleNoteWasMissed");
-                return info;
-
-            }
-            catch (Exception e)
-            {
-                Plugin.Logger.Error(e);
-                return default;
             }
         }
 

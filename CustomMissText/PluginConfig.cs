@@ -8,6 +8,7 @@ namespace CustomMissText
 {
     internal class PluginConfig
     {
+        public static PluginConfig instance;
         public virtual bool Enabled { get; set; } = true;
         public virtual bool Italics { get; set; } = true;
         public virtual bool UseBloomFont { get; set; } = false;
