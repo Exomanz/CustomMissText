@@ -2,8 +2,8 @@
 Reboot of Arti's original CustomMissText mod for Beat Saber.
 
 ## Dependencies:
-* BSIPA: v4.2.2+
-* BeatSaberMarkupLanguage: v1.6.3+
+* BSIPA: v4.3.5+
+* BeatSaberMarkupLanguage: v1.12.3+
 
 ## Current Features:
 * Replaces the "MISS" image with a text object that displays a random entry from the config file for each note missed.
