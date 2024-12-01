@@ -8,19 +8,21 @@ namespace CustomMissText.Patches
     [HarmonyPatch(typeof(FlyingTextEffect), nameof(FlyingTextEffect.InitAndPresent), MethodType.Normal)]
     internal class FlyingTextEffect_InitAndPresent
     {
-        private static DiContainer Container => MissedNoteEffectSpanwer_HandleNoteWasMissed.Container;
+        private static DiContainer Container => MissedNoteEffectSpawner_HandleNoteWasMissed.Container;
         private static EntryFileReader reader => EntryFileReader.Instance;
 
         [HarmonyPrefix]
         internal static bool Prefix(ref string text, ref TextMeshPro ____text)
         {
-            if (MissedNoteEffectSpanwer_HandleNoteWasMissed.inMethod && text == "MISS")
+            if (MissedNoteEffectSpawner_HandleNoteWasMissed.inMethod && text == "MISS")
             {
+                var entries = reader?.fileEntries;
+                if (entries == null) return true;
                 System.Random rnd = new System.Random();
-                int entryNum = rnd.Next((int)reader?.fileEntries?.Count);
+                int entryNum = rnd.Next(entries.Count);
                 TextMeshPro tmp = ____text;
 
-                text = string.Join("\n", reader?.fileEntries?[entryNum]);
+                text = string.Join("\n", entries[entryNum]);
                 tmp.overflowMode = TextOverflowModes.Overflow;
                 tmp.enableWordWrapping = false;
                 tmp.richText = true;
