@@ -1,3 +1,7 @@
+# ⚠️ THIS REPOSITORY HAS BEEN ARCHIVED ⚠️  
+This mod is now being maintained by Loloppe and the current repository can be found [here](https://github.com/Loloppe/CustomMissText).
+
+---
 # CustomMissText
 Reboot of Arti's original CustomMissText mod for Beat Saber.
 
